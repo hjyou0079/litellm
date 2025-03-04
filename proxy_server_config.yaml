@@ -11,6 +11,12 @@ model_list:
       api_base: https://openai-gpt-4-test-v-1.openai.azure.com/
       api_version: "2023-05-15"
       api_key: os.environ/AZURE_API_KEY # The `os.environ/` prefix tells litellm to read this from the env. See https://docs.litellm.ai/docs/simple_proxy#load-api-keys-from-vault
+  - model_name: gemini-2.0-pro-exp-02-05-free
+    litellm_params:
+      model: openrouter/google/gemini-2.0-pro-exp-02-05:free
+      api_base: https://openrouter.ai/api/v1/
+      api_version: "2023-05-15"
+      api_key: os.environ/OPENROUTER_API_KEY # The `os.environ/` prefix tells litellm to read this from the env. See https://docs.litellm.ai/docs/simple_proxy#load-api-keys-from-vault
   - model_name: gpt-3.5-turbo
     litellm_params:
       model: azure/chatgpt-v-2
